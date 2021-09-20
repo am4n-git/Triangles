@@ -1,9 +1,8 @@
 const quizForm = document.querySelector(".quiz-form");
 const submit = document.querySelector("#submit-btn");
 const output = document.querySelector("#output");
-
-const rightAnswers = ["90", "right"]
-
+const clr = document.querySelector("#clr-btn");
+const rightAnswers = ["90", "right", "Equilateral","√3/4 a2", "Isosceles triangles"];
 function calculateScore(){
     let score = 0;
     let index= 0;

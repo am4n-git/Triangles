@@ -1,6 +1,7 @@
 const inputs = document.querySelectorAll(".inputs")
 const btn = document.querySelector("#btn")
 const outputArea = document.querySelector("#output-area")
+const clr = document.querySelector("#clr-btn");
 
 function ipProduct(a,b){
     const product = a*b
@@ -20,5 +21,12 @@ function calcArea(){
         outputArea.innerText = "Enter the sides of triangle";
     }
 }
+function clearHandler(){
+    inputs[0].value="";
+    inputs[1].value="";
+
+    outputArea.innerText=""
+}
 
 btn.addEventListener("click", calcArea)
+clr.addEventListener("click", clearHandler)
