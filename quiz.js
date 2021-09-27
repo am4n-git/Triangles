@@ -7,13 +7,22 @@ function calculateScore(){
     let score = 0;
     let index= 0;
     const formResults = new FormData(quizForm);
+    
     for(let entry of formResults.values()){
         if(entry === rightAnswers[index]){
             score+=1;
         }
-        index+=1
+        index++;
     }
-    output.innerText = "Your Score is " +score
+    if(index===5){
+        for(var i =0; i<index; i++){
+            output.innerText = "Your Score is " +score
+        }
+    }
+    else{
+        output.innerText= "Attempt all the questions."
+    }
+    
 }
 
 submit.addEventListener("click",calculateScore);
